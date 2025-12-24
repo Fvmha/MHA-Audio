@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterHairAcademy - Podcast AI Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Figtree:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===================================================
+           MASTER HAIR ACADEMY — Hoja de Estilos Unificada
+           =================================================== */
+        :root {
+          --color-primary: #FFD700;
+          --color-primary-hover: #050505;
+          --color-secondary: #DAA520;
+          --color-bg: #101010;
+          --color-bg-alt: #121212;
+          --color-surface: #1e1e1e;
+          --color-surface-alt: #1a1a1a;
+          --color-text: #e0e0e0;
+          --color-text-muted: #aaa;
+          --color-dark: #000000;
+          --border-color: #333;
+          --font-principal: "Poppins", "Figtree", sans-serif;
+        }
+
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: var(--font-principal);
+          background: var(--color-bg);
+          color: var(--color-text);
+          line-height: 1.6;
+          overflow-x: hidden;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        @keyframes pulse-glow {
+          0%, 100% { box-shadow: 0 0 10px rgba(255, 215, 0, .6), 0 0 15px rgba(255, 215, 0, .5); }
+          50% { box-shadow: 0 0 20px rgba(255, 215, 0, .9), 0 0 30px rgba(255, 215, 0, .8); }
+        }
+
+        .cta {
+          display: inline-block;
+          padding: 0.7rem 1.5rem;
+          border-radius: 25px;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 0.85rem;
+          text-decoration: none;
+          transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease-in-out, background-position 1s ease;
+          cursor: pointer;
+          border: none;
+          letter-spacing: 0.5px;
+          background-size: 200% auto;
+        }
+
+        .cta-primary {
+          background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-primary) 100%);
+          color: var(--color-dark);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+        }
+
+        .cta:hover {
+          transform: translateY(-2px) scale(1.03);
+          background-position: right center;
+          animation: pulse-glow 1.5s infinite ease-in-out;
+        }
+
+        .hero {
+          position: relative;
+          overflow: hidden;
+          padding: 3rem 1rem;
+          background: linear-gradient(to bottom, var(--color-dark), var(--color-bg));
+          z-index: 1;
+        }
+        
+        .section-title {
+          font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+          color: var(--color-primary);
+          margin: 0 0 0.5rem 0;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+          text-align: center;
+        }
+
+        .academy-gold { color: var(--color-primary); }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "MasterHairAcademy Podcast AI",
+  "description": "Transforma landing pages HTML en podcasts conversacionales con voces premium (chico y chica) de España, optimizado para MasterHairAcademy.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
